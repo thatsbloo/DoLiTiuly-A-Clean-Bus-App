@@ -4,20 +4,23 @@ import { colors } from "../app/styles";
 interface BasicInputProps {
   placeholderText?: string;
   borderRadius?: number;
+  onChangeText: (text: string) => void;
+  value?: string;
 }
 
-export function BasicInput({ placeholderText = "Type here...", borderRadius = 12 }: BasicInputProps) {
+export function BasicInput({ placeholderText = "Type here...", borderRadius = 12, onChangeText, value }: BasicInputProps) {
     return <TextInput
       style={{
-        height: 40,
-        borderColor: "gray",
+        height: "100%",
+        borderColor: colors.honeydew + 80,
         borderWidth: 1,
-        marginBottom: 12,
-        paddingHorizontal: 10,
+        paddingRight: 12,
         color: colors.honeydew,
         borderRadius: borderRadius,
         textAlign: "right",
       }}
+      value={value}
+      onChangeText={onChangeText}
       placeholder={placeholderText}
       placeholderTextColor={colors.honeydew + 80}
     />;
