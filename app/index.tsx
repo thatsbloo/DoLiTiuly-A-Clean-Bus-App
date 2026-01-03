@@ -1,4 +1,3 @@
-import AutoCompleteInput from "@/components/AutoCompleteInput/AutoCompleteInput";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
 import { Dimensions, Keyboard, LayoutChangeEvent, Platform, TouchableWithoutFeedback, View } from "react-native";
@@ -29,7 +28,6 @@ export default function Index() {
         start={{ x: 0, y: 0 }} 
         end={{ x: 0, y: 1 }} 
         style={{ height: Math.max(Math.min(100, screenHeight * 0.075), 20), width: screenWidth, padding: 12, borderColor: colors.honeydew, borderBottomWidth: 1, borderStyle: 'dashed' }}>
-          <AutoCompleteInput height={headerHeight} />
         </LinearGradient>
         {/* <LinearGradient colors={[colors.onyx, colors.evergreen]} start={{ x: 0, y: 1 }} end={{ x: 0, y: 0 }} style={{ flex: 1, width: screenWidth, padding: 12 }}>
           <Button title="Press me" />
